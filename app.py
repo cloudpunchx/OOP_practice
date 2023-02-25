@@ -58,6 +58,23 @@ class Person:
     def say_name(self):
         print(self.first_name, self.last_name)
 
+class Student(Person):
+    def __init__(self, f_name, l_name, major):
+        super().__init__(f_name, l_name)
+        self.gpa = 2.5
+        self.major = major
+
+class EngineeringStudent(Student):
+    def __init__(self, f_name, l_name):
+        super().__init__(f_name, l_name, "Engineering")
+
+class PsychStudent(Student):
+    def __init__(self, f_name, l_name):
+        super().__init__(f_name, l_name, "Psychology")
+
+# the usefulness of this would be the functions related to each class (engineering, psych, eg)
+# this example is very shallow and has no functions
+
 # self.pay is a function variable
 # pay=15, if its not specified then pay defaults to 15
 class Employee(Person):
